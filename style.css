@@ -1,0 +1,689 @@
+/* ========================================== */
+/* VARIÁVEIS DE COR E DESIGN SYSTEM           */
+/* ========================================== */
+
+:root {
+  /* Fontes */
+  --fonte-titulo: 'Outfit', sans-serif;
+  --fonte-texto: 'Inter', sans-serif;
+
+  /* Cores - Modo Claro */
+  --cor-fundo: #ffffff;
+  --cor-fundo-cartao: #f8f9fc;
+  --cor-fundo-cabecalho: rgba(255, 255, 255, 0.95);
+  --cor-texto: #1e1e38;
+  --cor-texto-secundario: #5a5a75;
+  --cor-titulo: #0f172a;
+  --cor-azul-marinho: #0f172a;
+  --cor-roxo: #6d28d9;
+  --cor-borda: #e2e8f0;
+  --cor-destaque: #7c3aed;
+  --cor-botao-texto: #ffffff;
+  --cor-tag-fundo: #ede9fe;
+  --cor-tag-texto: #6d28d9;
+}
+
+/* Cores - Modo Escuro */
+body.modo-escuro {
+  --cor-fundo: #0a0f1d;
+  --cor-fundo-cartao: #141b2d;
+  --cor-fundo-cabecalho: rgba(10, 15, 29, 0.95);
+  --cor-texto: #e2e8f0;
+  --cor-texto-secundario: #94a3b8;
+  --cor-titulo: #ffffff;
+  --cor-azul-marinho: #38bdf8;
+  --cor-roxo: #a78bfa;
+  --cor-borda: #1f293d;
+  --cor-destaque: #8b5cf6;
+  --cor-botao-texto: #ffffff;
+  --cor-tag-fundo: #241b47;
+  --cor-tag-texto: #c4b5fd;
+}
+
+/* ========================================== */
+/* RESET E ESTILOS GLOBAIS                    */
+/* ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Container para centralização e alinhamento */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Compensação do cabeçalho fixo */
+main {
+  padding-top: 4.5rem;
+}
+
+/* Estrutura base de seções */
+.secao {
+  padding: 5.5rem 0;
+}
+
+/* Tipografia de títulos e subtítulos */
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-titulo);
+  line-height: 1.2;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-secao {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Botões base */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.botao-primario {
+  background-color: var(--cor-destaque);
+  color: var(--cor-botao-texto);
+}
+
+.botao-secundario {
+  background-color: transparent;
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+/* ========================================== */
+/* SEÇÃO: CABEÇALHO E NAVEGAÇÃO               */
+/* ========================================== */
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-fundo-cabecalho);
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-titulo);
+  text-decoration: none;
+}
+
+.menu-navegacao {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.link-menu {
+  text-decoration: none;
+  color: var(--cor-texto-secundario);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.botao-tema {
+  background: transparent;
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+  font-size: 1.1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsividade do cabeçalho */
+@media (max-width: 768px) {
+  .navegacao {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .menu-navegacao {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .link-menu {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: INÍCIO (#inicio)                    */
+/* ========================================== */
+
+.secao-inicio {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: left;
+}
+
+.conteudo-inicio {
+  max-width: 800px;
+}
+
+.subtitulo-cargo {
+  font-size: 1.5rem;
+  color: var(--cor-destaque);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.frase-destaque {
+  font-size: 1.25rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+
+.acoes-inicio {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsividade da seção Início */
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .subtitulo-cargo {
+    font-size: 1.25rem;
+  }
+
+  .frase-destaque {
+    font-size: 1.1rem;
+  }
+
+  .acoes-inicio {
+    flex-direction: column;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: SOBRE MIM (#sobre-mim)              */
+/* ========================================== */
+
+.conteudo-sobre-mim {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.foto-container {
+  flex-shrink: 0;
+}
+
+.foto-perfil {
+  width: 240px;
+  height: 240px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 3px solid var(--cor-destaque);
+  background-color: var(--cor-fundo-cartao);
+  display: block;
+}
+
+.texto-sobre-mim {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.paragrafo-sobre {
+  color: var(--cor-texto-secundario);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Responsividade da seção Sobre Mim */
+@media (max-width: 768px) {
+  .conteudo-sobre-mim {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: HABILIDADES (#habilidades)          */
+/* ========================================== */
+
+.grade-habilidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.cartao-habilidade {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 2.2rem 1.8rem;
+  text-align: left;
+}
+
+.icone-habilidade {
+  font-size: 2rem;
+  color: var(--cor-destaque);
+  margin-bottom: 1.2rem;
+}
+
+.titulo-habilidade {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.descricao-habilidade {
+  color: var(--cor-texto-secundario);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Responsividade da seção Habilidades */
+@media (max-width: 768px) {
+  .grade-habilidades {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: PROJETOS (#projetos)                */
+/* ========================================== */
+
+.grade-projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.cartao-projeto {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cabecalho-cartao {
+  margin-bottom: 1rem;
+}
+
+.titulo-projeto {
+  font-size: 1.35rem;
+}
+
+.descricao-projeto {
+  color: var(--cor-texto-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.tecnologias-projeto {
+  margin-bottom: 1.8rem;
+}
+
+.tag-tecnologia {
+  display: inline-block;
+  background-color: var(--cor-tag-fundo);
+  color: var(--cor-tag-texto);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+}
+
+.acoes-projeto {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.botao-projeto,
+.botao-codigo {
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+}
+
+/* Responsividade da seção Projetos */
+@media (max-width: 900px) {
+  .grade-projetos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: EXPERIÊNCIA E FORMAÇÃO              */
+/* ========================================== */
+
+.grade-experiencia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.cartao-experiencia {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 2.2rem;
+}
+
+.subtitulo-experiencia {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: var(--cor-destaque);
+}
+
+.texto-experiencia {
+  color: var(--cor-texto-secundario);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Responsividade da seção Experiência */
+@media (max-width: 768px) {
+  .grade-experiencia {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: CONTATO (#contato)                  */
+/* ========================================== */
+
+.conteudo-contato {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3.5rem;
+}
+
+.informacoes-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.titulo-contato-info {
+  font-size: 1.6rem;
+}
+
+.texto-contato-info {
+  color: var(--cor-texto-secundario);
+  line-height: 1.7;
+}
+
+.lista-contatos-diretos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.item-contato-direto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--cor-destaque);
+  font-size: 1.1rem;
+}
+
+.link-contato-direto {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.formulario-contato {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rotulo-campo {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+.campo-texto {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.botao-enviar {
+  align-self: flex-start;
+}
+
+/* Responsividade da seção Contato */
+@media (max-width: 768px) {
+  .conteudo-contato {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ========================================== */
+/* SEÇÃO: RODAPÉ                              */
+/* ========================================== */
+
+.rodape {
+  background-color: var(--cor-fundo-cartao);
+  border-top: 1px solid var(--cor-borda);
+  padding: 2.5rem 0;
+  margin-top: 3rem;
+}
+
+.conteudo-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+}
+
+.links-rodape {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.link-externo {
+  color: var(--cor-texto-secundario);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+/* Responsividade do rodapé para celular */
+@media (max-width: 768px) {
+  .conteudo-rodape {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* ========================================== */
+/* EFEITOS DE HOVER E TRANSIÇÕES              */
+/* ========================================== */
+
+/* Transições globais de tema e superfícies */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cabecalho {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.rodape {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cartao-habilidade,
+.cartao-projeto,
+.cartao-experiencia,
+.formulario-contato {
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.cartao-projeto:hover,
+.cartao-habilidade:hover {
+  transform: translateY(-4px);
+  border-color: var(--cor-destaque);
+}
+
+/* Transições e hovers dos botões */
+.botao {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.botao-primario:hover {
+  transform: translateY(-2px);
+  background-color: var(--cor-roxo);
+}
+
+.botao-secundario:hover {
+  transform: translateY(-2px);
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+/* Transições e hovers do cabeçalho */
+.logo {
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: var(--cor-destaque);
+}
+
+.link-menu {
+  transition: color 0.2s ease;
+}
+
+.link-menu:hover {
+  color: var(--cor-destaque);
+}
+
+.botao-tema {
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.botao-tema:hover {
+  transform: rotate(15deg);
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+/* Transições e hovers dos links e campos de contato */
+.link-contato-direto {
+  transition: color 0.2s ease;
+}
+
+.link-contato-direto:hover {
+  color: var(--cor-destaque);
+}
+
+.campo-texto {
+  transition: border-color 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.campo-texto:focus {
+  border-color: var(--cor-destaque);
+}
+
+/* Transições e hovers do rodapé */
+.link-externo {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.link-externo:hover {
+  color: var(--cor-destaque);
+  transform: translateY(-2px);
+}

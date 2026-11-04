@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Maria, desenvolvedora Full Stack. Conheça meus projetos, habilidades e entre em contato.">
+  <title>Maria | Desenvolvedora Full Stack</title>
+
+  <!-- Fontes do Google Fonts: Outfit (títulos) e Inter (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho fixo com navegação -->
+  <header class="cabecalho">
+    <nav class="navegacao container">
+      <a href="#inicio" class="logo">Maria</a>
+
+      <ul class="menu-navegacao">
+        <li><a href="#inicio" class="link-menu">Início</a></li>
+        <li><a href="#sobre-mim" class="link-menu">Sobre mim</a></li>
+        <li><a href="#habilidades" class="link-menu">Habilidades</a></li>
+        <li><a href="#projetos" class="link-menu">Projetos</a></li>
+        <li><a href="#experiencia-formacao" class="link-menu">Experiência</a></li>
+        <li><a href="#contato" class="link-menu">Contato</a></li>
+      </ul>
+
+      <button id="botao-tema" class="botao-tema" aria-label="Alternar tema claro e escuro">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="secao secao-inicio">
+      <div class="container conteudo-inicio">
+        <h1 class="titulo-principal">Maria</h1>
+        <p class="subtitulo-cargo">Desenvolvedora Full Stack</p>
+        <p class="frase-destaque">Transformo ideias em experiências digitais funcionais, bonitas e escaláveis.</p>
+        <div class="acoes-inicio">
+          <a href="#projetos" class="botao botao-primario">Ver Projetos</a>
+          <a href="#contato" class="botao botao-secundario">Entrar em Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre-mim" class="secao secao-sobre-mim">
+      <div class="container">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <div class="conteudo-sobre-mim">
+          <div class="foto-container">
+            <img src="img/perfil.svg" alt="[foto-profissional] Foto profissional de Maria, desenvolvedora Full Stack" class="foto-perfil">
+          </div>
+          <div class="texto-sobre-mim">
+            <p class="paragrafo-sobre">[texto-apresentacao]</p>
+            <p class="paragrafo-sobre">[trajetoria-profissional]</p>
+            <p class="paragrafo-sobre">[interesses-profissionais]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="secao secao-habilidades">
+      <div class="container">
+        <h2 class="titulo-secao">Habilidades</h2>
+        <div class="grade-habilidades">
+          <article class="cartao-habilidade">
+            <div class="icone-habilidade">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="titulo-habilidade">Front-end</h3>
+            <p class="descricao-habilidade">[lista-de-habilidades]</p>
+          </article>
+
+          <article class="cartao-habilidade">
+            <div class="icone-habilidade">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="titulo-habilidade">Back-end</h3>
+            <p class="descricao-habilidade">[lista-de-habilidades]</p>
+          </article>
+
+          <article class="cartao-habilidade">
+            <div class="icone-habilidade">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3 class="titulo-habilidade">Ferramentas</h3>
+            <p class="descricao-habilidade">[lista-de-habilidades]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos (Destaque do site) -->
+    <section id="projetos" class="secao secao-projetos">
+      <div class="container">
+        <h2 class="titulo-secao">Projetos</h2>
+        <div class="grade-projetos">
+          <article class="cartao-projeto">
+            <div class="cabecalho-cartao">
+              <h3 class="titulo-projeto">[nome-projeto]</h3>
+            </div>
+            <p class="descricao-projeto">[descricao-projeto]</p>
+            <p class="tecnologias-projeto"><span class="tag-tecnologia">[tecnologias-projeto]</span></p>
+            <div class="acoes-projeto">
+              <a href="[link-projeto]" class="botao botao-primario botao-projeto" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+              </a>
+              <a href="[link-github]" class="botao botao-secundario botao-codigo" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> Código
+              </a>
+            </div>
+          </article>
+
+          <article class="cartao-projeto">
+            <div class="cabecalho-cartao">
+              <h3 class="titulo-projeto">[nome-projeto]</h3>
+            </div>
+            <p class="descricao-projeto">[descricao-projeto]</p>
+            <p class="tecnologias-projeto"><span class="tag-tecnologia">[tecnologias-projeto]</span></p>
+            <div class="acoes-projeto">
+              <a href="[link-projeto]" class="botao botao-primario botao-projeto" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+              </a>
+              <a href="[link-github]" class="botao botao-secundario botao-codigo" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> Código
+              </a>
+            </div>
+          </article>
+
+          <article class="cartao-projeto">
+            <div class="cabecalho-cartao">
+              <h3 class="titulo-projeto">[nome-projeto]</h3>
+            </div>
+            <p class="descricao-projeto">[descricao-projeto]</p>
+            <p class="tecnologias-projeto"><span class="tag-tecnologia">[tecnologias-projeto]</span></p>
+            <div class="acoes-projeto">
+              <a href="[link-projeto]" class="botao botao-primario botao-projeto" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+              </a>
+              <a href="[link-github]" class="botao botao-secundario botao-codigo" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> Código
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Experiência e Formação -->
+    <section id="experiencia-formacao" class="secao secao-experiencia-formacao">
+      <div class="container">
+        <h2 class="titulo-secao">Experiência e Formação</h2>
+        <div class="grade-experiencia">
+          <article class="cartao-experiencia">
+            <h3 class="subtitulo-experiencia">Experiência Profissional</h3>
+            <p class="texto-experiencia">[experiencias-profissionais-e-cursos]</p>
+          </article>
+
+          <article class="cartao-experiencia">
+            <h3 class="subtitulo-experiencia">Cursos e Formação</h3>
+            <p class="texto-experiencia">[experiencias-profissionais-e-cursos]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="secao secao-contato">
+      <div class="container">
+        <h2 class="titulo-secao">Contato</h2>
+        <div class="conteudo-contato">
+          <div class="informacoes-contato">
+            <h3 class="titulo-contato-info">Vamos conversar!</h3>
+            <p class="texto-contato-info">Estou disponível para novas oportunidades, projetos e conexões profissionais.</p>
+            <ul class="lista-contatos-diretos">
+              <li class="item-contato-direto">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:[email]" class="link-contato-direto">[email]</a>
+              </li>
+              <li class="item-contato-direto">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="[link-linkedin]" class="link-contato-direto" target="_blank" rel="noopener noreferrer">[link-linkedin]</a>
+              </li>
+              <li class="item-contato-direto">
+                <i class="fa-brands fa-github"></i>
+                <a href="[link-github]" class="link-contato-direto" target="_blank" rel="noopener noreferrer">[link-github]</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="formulario-contato" action="[definir-como-o-formulario-sera-enviado]" method="POST">
+            <div class="grupo-campo">
+              <label for="campo-nome" class="rotulo-campo">Nome</label>
+              <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" class="campo-texto" required>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="campo-email" class="rotulo-campo">E-mail</label>
+              <input type="email" id="campo-email" name="email" placeholder="seuemail@exemplo.com" class="campo-texto" required>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="campo-mensagem" class="rotulo-campo">Mensagem</label>
+              <textarea id="campo-mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." class="campo-texto" required></textarea>
+            </div>
+
+            <button type="submit" class="botao botao-primario botao-enviar">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container conteudo-rodape">
+      <p>&copy; 2026 Maria. Todos os direitos reservados.</p>
+      <div class="links-rodape">
+        <a href="[link-github]" class="link-externo" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="[link-linkedin]" class="link-externo" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
